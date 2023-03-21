@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/pythagoras_theorem_calculator"
+        android:textSize="34sp"
+        android:textColor="@color/app_theme_color"/>
+
+    <ImageView
+        android:id="@+id/triangle_image"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="124dp"
+        android:src="@drawable/triangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/right_angled_triangle"/>
+
+    <EditText
+        android:id="@+id/sideA"
+        android:layout_width="@dimen/editText_100dp"
+        android:layout_height="@dimen/editText_50dp"
+        android:layout_marginTop="@dimen/margin_30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/triangle_image"
+        app:layout_constraintTop_toTopOf="@id/triangle_image"
+        android:hint="@string/side_a"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/sideB"
+        android:layout_width="@dimen/editText_100dp"
+        android:layout_height="@dimen/editText_50dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/triangle_image"
+        app:layout_constraintTop_toBottomOf="@id/sideA"
+        android:hint="@string/Side_B"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/side_C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:text="@string/side_c"
+        android:textAlignment="textStart"
+        android:textColor="@color/purple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/triangle_image"
+        />
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/side_C"
+        app:layout_constraintStart_toEndOf="@id/side_C"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="@string/calculate"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
